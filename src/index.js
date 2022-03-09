@@ -13,7 +13,8 @@
 import {
   // binarySearchRecursive,
   MaxHeap,
-  heapify
+  heapify,
+  mergeSort,
 } from "./algorithm";
 
 import {
@@ -21,6 +22,18 @@ import {
   Queue,
   Graph
 } from './ds';
+
+import { problem1, problem2 } from "./problems";
+
+console.log(problem1([
+  [ 'INSERT', 'GT23513413' ],
+  [ 'INSERT', 'TQC2451340' ],
+  [ 'SHIP', '-' ],
+  [ 'INSERT', 'VYP8561991' ],
+  [ 'SHIP', '-' ]
+]));
+console.log(problem2('checking'));
+
 
 /**
  * BinarySearch
@@ -65,22 +78,25 @@ console.log(res, res === 14)
 /**
  * Graph
  */
-const g = new Graph(6);
-const vertices = ['A', 'B', 'C', 'D', 'E', 'F']
-vertices.forEach(
-  (vertex) => {
-    g.addVertex(vertex);
-  }
-);
-g.addEdge('A', 'B');
-g.addEdge('A', 'D');
-g.addEdge('A', 'E');
-g.addEdge('B', 'C');
-g.addEdge('D', 'E');
-g.addEdge('E', 'F');
-g.addEdge('E', 'C');
-g.addEdge('C', 'F');
+// const g = new Graph(6);
+// const vertices = ['A', 'B', 'C', 'D', 'E', 'F']
+// vertices.forEach(
+//   (vertex) => {
+//     g.addVertex(vertex);
+//   }
+// );
+// g.addEdge('A', 'B');
+// g.addEdge('A', 'D');
+// g.addEdge('A', 'E');
+// g.addEdge('B', 'C');
+// g.addEdge('D', 'E');
+// g.addEdge('E', 'F');
+// g.addEdge('E', 'C');
+// g.addEdge('C', 'F');
 
-console.log(g.dfs('A'));
-console.log(g.printGraph());
+// console.log(g.dfs('A'));
+// console.log(g.printGraph());
 
+
+// const unsorted = [10, 2, 1, 5, 4, 6, 3];
+// console.log(mergeSort(unsorted));
